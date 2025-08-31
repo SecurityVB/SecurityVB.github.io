@@ -1,0 +1,75 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("images/back.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+a {
+    font-family: monospace;
+    font-size: 50px;
+    font-weight: bold;
+    color: rgb(126, 255, 114);
+    text-shadow: 5px 5px 15px #00000079;
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgb(90, 180, 82);
+}
+
+.light {
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+}
+
+.light::before {
+    content: "";
+    position: absolute;
+    top: -150%;
+    left: -150%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        120deg, 
+        transparent 0%, 
+        rgba(255, 255, 255, 0.24) 50%, 
+        transparent 100%
+    );
+    transform: rotate(0deg);
+    animation: shine 3s linear infinite;  
+}
+
+@keyframes shine {
+    0% {
+        transform: translateY(100%) translateX(-100%) rotate(25deg);
+    }
+    100% {
+        transform: translateY(-100%) translateX(100%) rotate(25deg);
+    }
+}
+
+.main-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    border-radius: 30px;
+    margin: 16vh auto 30vh auto;
+    height: 70%;
+    width: 70%;
+    backdrop-filter: blur(15px);
+    box-shadow: 0px 0px 26px 2px #ffffff40;
+    z-index: 23px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    margin: 0vh 0vh 0vh 5vh;
+}
