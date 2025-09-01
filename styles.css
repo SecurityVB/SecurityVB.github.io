@@ -1,16 +1,24 @@
+:root {
+    --back-color: #101820;
+    --titels-color: #FEE715;
+    --titels-hover-color: #c4b211;
+    --shadow-color: #fee71554;
+}
+
 body {
+    font-weight: bold;
+    font-family: monospace;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #101820;
+    background-color: var(--back-color);
 }
 
 h1.title {
+    word-break: break-all; 
     text-align: center;
-    font-family: monospace;
     font-size: 5vh;
-    font-weight: bold;
-    color: #FEE715;;
+    color: var(--titels-color);
     text-shadow: 0px 0px 15px #ffffff;
 }
 
@@ -19,15 +27,13 @@ hr {
 }
 
 a {
-    font-family: monospace;
     font-size: 3vh;
-    font-weight: bold;
-    color: #FEE715;;
+    color: var(--titels-color);
     text-decoration: none;
 }
 
 a:hover {
-    color: #c4b211;
+    color: var(--titels-hover-color);
 }
 
 .main-container {
@@ -39,7 +45,6 @@ a:hover {
     margin: 16vh 16vh 0vh 16vh;
     height: max-content;
     width: 70%;
-    /* backdrop-filter: blur(15px); */
     box-shadow: 0px 0px 26px 2px #ffffff40;
 }
 
@@ -60,7 +65,7 @@ a:hover {
     margin-bottom: 4em;
     border-radius: 10px;
     padding: 0.1vh 1vh 0.7vh 1vh;
-    box-shadow: 0px 0px 15px 1px #fee71554;
+    box-shadow: 0px 0px 15px 1px var(--shadow-color);
 }
 
 .repositories {
@@ -77,19 +82,17 @@ a:hover {
     justify-content: left;
     width: 100%;
     word-break: break-all; 
-    font-family: monospace;
-    font-weight: bold;
     border-radius: 10px;
     margin-bottom: 2em;
     padding: 0.1vh 1vh 0.7vh 1vh;
-    box-shadow: 0px 0px 15px 1px #fee71554;
+    box-shadow: 0px 0px 15px 1px var(--shadow-color);
     color: #b6b39d
 }
 
 .repository-title {
     margin-top: 0.5em;
     font-size: 2em;
-    color: #FEE715;
+    color: var(--titels-color);
 }
 
 .repository-description {
@@ -112,4 +115,43 @@ span.language-cpp {
 }
 span.language-csharp {
     background-color: #178600;
+}
+
+.decor {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 0;
+    bottom: 52%;
+    border: none;
+    background-color: var(--titels-color);
+    box-shadow: 0px 0px 10px 10px var(--titels-color);
+    height: 66%;
+    width: 5vh;
+    transform: rotate(45deg);
+    animation: fadeIn 3s ease forwards;
+}
+
+.decor:hover {
+    background-color: var(--titels-hover-color);
+    box-shadow: 0px 0px 10px 10px var(--titels-hover-color);
+}
+
+p.tag {
+    color: rgba(0, 0, 0, 0.26);
+    text-shadow: 0px 0px 7px rgba(0, 0, 0, 0.26);
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 250%;
+    margin-bottom: 20vh;
+    transform: rotate(-90deg);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
