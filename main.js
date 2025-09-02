@@ -1,7 +1,9 @@
 colors = [
-    ["#101820", "#FEE715", "#c4b211", "#fee71554"],
-    ["#2B5288", "#E5E0D9", "#b9b5afff", "#e5e0d965"],
-    ["#004643", "#E5E0D9", "#c0bcb5ff", "#e5e0d960"],
+    ["#101820", "#FEE715", "#c4b211", "#fee71554", "#ffffff40", "#ffffff96"],
+    ["#2B5288", "#E5E0D9", "#b9b5afff", "#e5e0d965", "#00000040", "#ffffff96"],
+    ["#004643", "#E5E0D9", "#c0bcb5ff", "#e5e0d960", "#ffffff40", "#ffffff96"],
+    ["#233d4d", "#fe7f2d", "#d46b24ff", "#fe812d5e", "#00000040", "#00000096"],
+    ["#7B3B4B", "#D6A53C", "#aa832fff", "#d6a53c52", "#00000040", "#00000096"],
 ]
 
 function* colorNext() {
@@ -24,4 +26,6 @@ button.addEventListener("click", () => {
     document.documentElement.style.setProperty('--titels-color', clrs[1]);
     document.documentElement.style.setProperty('--titels-hover-color', clrs[2]);
     document.documentElement.style.setProperty('--shadow-color', clrs[3]);
+    document.documentElement.style.setProperty('--shadow-container-color', clrs[4]);
+    document.documentElement.style.setProperty('--shadow-text-color', clrs[5]);
 });
