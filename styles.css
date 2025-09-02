@@ -42,9 +42,8 @@ a:hover {
     justify-content: center;
     align-items: center;
     border-radius: 30px 30px 0px 0px;
-    margin: 16vh 16vh 0vh 16vh;
+    margin: 40% 10% 0 10%;
     height: max-content;
-    width: 70%;
     box-shadow: 0px 0px 26px 2px #ffffff40;
 }
 
